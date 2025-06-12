@@ -1,7 +1,7 @@
 {
-  "name": "cdp-node-backend-template",
-  "version": "0.1.0",
-  "description": "CDP Node.js Backend Template",
+  "name": "fg-gss-pmf",
+  "version": "0.0.0",
+  "description": "fg-gss-pmf",
   "main": "src/index.js",
   "type": "module",
   "engines": {
