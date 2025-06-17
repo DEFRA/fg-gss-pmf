@@ -1,34 +1,37 @@
-export const calculateGrantTotal = async (breedsCommand) => {
+export const calculateGrantTotal = async (command) => {
   const pigTypes = [
     {
       type: 'largeWhite',
+      description: 'Large White Pig',
       value: 10
     },
     {
       type: 'largeBrown',
+      description: 'Large Brown Pig',
       value: 15
     }
   ]
 
-  const result = []
-  let grandTotal = 0
+  const response = { items: [] }
+  let total = 0
 
-  breedsCommand.pigTypes.forEach((breed) => {
+  command.pigTypes.forEach((breed) => {
     const matchedPigType = pigTypes.find(
       (pigType) => pigType.type === breed.pigType
     )
 
     if (matchedPigType) {
-      result.push({
+      response.items.push({
         type: breed.pigType,
+        description: matchedPigType.description,
         value: matchedPigType.value,
         quantity: breed.quantity,
         total: matchedPigType.value * breed.quantity
       })
 
-      grandTotal += matchedPigType.value * breed.quantity
+      total += matchedPigType.value * breed.quantity
     }
   })
 
-  return { result, grandTotal }
+  return { ...response, grandTotal: total }
 }
