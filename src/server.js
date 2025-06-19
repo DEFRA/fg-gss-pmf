@@ -1,5 +1,7 @@
 import Hapi from '@hapi/hapi'
-
+import HapiSwagger from 'hapi-swagger'
+import Inert from '@hapi/inert'
+import Vision from '@hapi/vision'
 import { config } from './config.js'
 import { router } from './plugins/router.js'
 import { requestLogger } from './common/helpers/logging/request-logger.js'
@@ -48,7 +50,18 @@ async function createServer() {
     requestTracing,
     secureContext,
     pulse,
-    router
+    router,
+    Inert,
+    Vision,
+    {
+      plugin: HapiSwagger,
+      options: {
+        info: {
+          title: 'Calculation Breeds API',
+          version: config.get('serviceVersion')
+        }
+      }
+    }
   ])
 
   return server
