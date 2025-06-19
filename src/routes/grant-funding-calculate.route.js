@@ -21,8 +21,8 @@ export const grantsFundingCalculatorRoute = {
 
   async handler(request, h) {
     console.log('payload==', request.payload)
-    await calculateGrantTotal(request.payload)
+    const response = await calculateGrantTotal(request.payload)
 
-    return h.response().code(204)
+    return h.response(response).code(200)
   }
 }
