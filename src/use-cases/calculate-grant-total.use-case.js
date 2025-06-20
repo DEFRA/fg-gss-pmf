@@ -9,6 +9,16 @@ export const calculateGrantTotal = async (command) => {
       type: 'largeBrown',
       description: 'Large Brown Pig',
       value: 15
+    },
+    {
+      type: 'berkshire',
+      description: 'Berkshire',
+      value: 18
+    },
+    {
+      type: 'other',
+      description: 'Other',
+      value: 10
     }
   ]
 
