@@ -6,8 +6,8 @@ export const calculateGrantTotal = async (command) => {
       value: 10
     },
     {
-      type: 'landace',
-      description: 'British Landace',
+      type: 'landrace',
+      description: 'British Landrace',
       value: 15
     },
     {
