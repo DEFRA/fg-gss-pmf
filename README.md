@@ -169,7 +169,6 @@ docker run -e PORT=3001 -p 3001:3001 fg-gss-pmf
 
 A local environment with:
 
-- Localstack for AWS services (S3, SQS)
 - Redis
 - This service.
 - A commented out frontend example.
