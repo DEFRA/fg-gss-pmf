@@ -105,11 +105,11 @@ git config --global core.autocrlf false
 
 ## API endpoints
 
-| Endpoint             | Description                    |
-| :------------------- | :----------------------------- |
-| `GET: /health`       | Health                         |
-| `GET: /example    `  | Example API (remove as needed) |
-| `GET: /example/<id>` | Example API (remove as needed) |
+| Endpoint                        | Description                               |
+| :------------------------------ | :---------------------------------------- |
+| `GET: /health`                  | Health                                    |
+| `POST: /grantFundingCalculator` | Calculate the PMF grant funding total     |
+| `POST: /paymentSchedule`        | Calculate the annual PMF payment schedule |
 
 ## Development helpers
 

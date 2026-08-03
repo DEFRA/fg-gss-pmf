@@ -1,34 +1,11 @@
-export const calculateGrantTotal = async (command) => {
-  const pigTypes = [
-    {
-      type: 'largeWhite',
-      description: 'Large White Pig',
-      value: 10
-    },
-    {
-      type: 'britishLandrace',
-      description: 'British Landrace',
-      value: 15
-    },
-    {
-      type: 'berkshire',
-      description: 'Berkshire',
-      value: 18
-    },
-    {
-      type: 'other',
-      description: 'Other',
-      value: 10
-    }
-  ]
+import { findPigType } from '../models/pig-types.js'
 
+export const calculateGrantTotal = async (command) => {
   const response = { items: [] }
   let total = 0
 
   command.pigTypes.forEach((breed) => {
-    const matchedPigType = pigTypes.find(
-      (pigType) => pigType.type === breed.pigType
-    )
+    const matchedPigType = findPigType(breed.pigType)
 
     if (matchedPigType) {
       response.items.push({
