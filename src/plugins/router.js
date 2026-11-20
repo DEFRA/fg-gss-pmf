@@ -1,7 +1,7 @@
 import { health } from '../routes/health.js'
 import { grantsFundingCalculatorRoute } from '../routes/grant-funding-calculate.route.js'
 import { paymentScheduleRoute } from '../routes/payment-schedule.route.js'
-import { flyOptionsRoute } from '../routes/fly-options.route.js'
+import { breedsRoute, referenceListRoute } from '../routes/reference.route.js'
 
 const router = {
   plugin: {
@@ -11,7 +11,8 @@ const router = {
         health,
         grantsFundingCalculatorRoute,
         paymentScheduleRoute,
-        flyOptionsRoute
+        referenceListRoute,
+        breedsRoute
       ])
     }
   }
